@@ -1,18 +1,3 @@
-enabled_linters:
-  - DOTNET_FORMAT
-  - ROSLYNATOR
-
-dotnet_format_options:
-  - "--check"
-
-roslynator_rules:
-  severity_level: "info"
-  exclude_categories:
-    - "Formatting"
-
-file_extensions:
-  - cs
-  - csproj
-
-include:
-  - ./*
+ENABLE_LINTERS:
+  - CSHARP_DOTNET_FORMAT
+  - CSHARP_ROSLYNATOR
