@@ -1,0 +1,29 @@
+name: MegaLinter for Unity Project
+
+on:
+  push:
+    # Run on all branches
+    branches:
+      - '*'
+  pull_request:
+    # Run on pull requests targeting any branch
+    branches:
+      - '*'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 'latest'  # Automatically fetch the latest .NET version
+
+      - name: Install MegaLinter
+        uses: nvuillam/mega-linter-action@v8
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
