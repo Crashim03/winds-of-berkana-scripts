@@ -13,3 +13,6 @@ roslynator_rules:
 file_extensions:
   - cs
   - csproj
+
+include:
+  - ./*
