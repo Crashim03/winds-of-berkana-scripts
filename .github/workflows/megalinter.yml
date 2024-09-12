@@ -24,6 +24,7 @@ jobs:
           dotnet-version: 'latest'  # Automatically fetch the latest .NET version
 
       - name: Install MegaLinter
-        uses: nvuillam/mega-linter-action@v8
+        uses: oxsecurity/megalinter@v8.0.0
+    
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
